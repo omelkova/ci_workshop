@@ -125,5 +125,18 @@ Once you push changes to your Bitbucket repository the Jenkins build will be tri
   * Select newly created credentials: 
 ![OAuth](https://cloud.githubusercontent.com/assets/9073171/23789958/c816364a-0585-11e7-8a22-a2d283988c61.png)
   * `Save`
+
 Try to modify your project and push changes. You now should see the build status notification in the Bitbucket commits view:
+
 ![build status](https://cloud.githubusercontent.com/assets/9073171/23790090/48ed08ac-0586-11e7-86c9-2eab8445ca09.png)
+
+## Shippable
+### Installation
+* Sign in to Shippable (http://www.shippable.com/) with your Bitbucket credentials
+* Click on the button on the top-left corner of the page and select your Bibucket name
+* Click on `Enable project` button
+* Find your project and click on `Enable`
+![enable shippable](https://cloud.githubusercontent.com/assets/9073171/23790445/bec5411a-0587-11e7-8349-92b9bf8099bc.png)
+### Configuration
+* Add `shippable.yml` from this tutorial to the root folder of your project
+* git add, commit and push. And that is it. Your project's build will be triggered automatically on Shippable and the build status will be displaied on Bitbucket `Build` field.
