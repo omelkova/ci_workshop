@@ -66,6 +66,8 @@ In the "Source Code Management" section select "Git", enter the URL of your fork
 ![BB credentials](https://cloud.githubusercontent.com/assets/9073171/23786978/792eadb2-0578-11e7-93f7-b32223747824.png)
 Add created credentials:
 ![Add credentials](https://cloud.githubusercontent.com/assets/9073171/23787027/b3a85826-0578-11e7-9538-17f586c44604.png)
+In the 'Build Triggers' section toggle the 'Build when a change is pushed to BitBucket' radio button:
+![build when change pushed](https://cloud.githubusercontent.com/assets/9073171/23788943/7e66f344-0581-11e7-818a-62623ebc472e.png)
 In the 'Build' section select 'Use Gradle Wrapper' radio button. Also tick "Make gradlew executable". Also setup a `test` gradle task:
 ![gradle conf](https://cloud.githubusercontent.com/assets/9073171/23787239/c71c7936-0579-11e7-820d-9b128670931c.png)
 Press "Save".
@@ -84,3 +86,5 @@ Copy the forwarding URL and !!<span style="color:blue">do not close the console<
 ![ngrok](https://cloud.githubusercontent.com/assets/9073171/23788279/7c726c9c-057e-11e7-958e-484ee17fb3fb.png)
 After your Jenkins server become available in the Internet go to your Bitbucket project settings, Webhooks section in the left menu, press "Add webhook". Give any name to your new webhook, paste ngrok forwarding URl+/bitbucket-hook/, press "Save":
 ![bb webhook settings](https://cloud.githubusercontent.com/assets/9073171/23788606/ec7e2e58-057f-11e7-96b1-8be7376e1b70.png)
+Note that this webhook become invalid once you will close your terminal with ngrok running.
+Once you push changes to your Bitbucket repository the Jenkins build will be triggered automatically.
