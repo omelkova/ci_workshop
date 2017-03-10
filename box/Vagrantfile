@@ -8,10 +8,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Every Vagrant virtual environment requires a box to build off of.
   # Named boxes, like this one, don't need a URL, since the are looked up
-  # in the "vagrant cloud" (https://vagrantcloud.com)
+  # in the "vagrant cloud" (https://atlas.hashicorp.com/boxes/search)
   config.vm.box = "puphpet/debian75-x64"
 
-  # Publish guest port 6060 on host port 6060
+  # Publish guest port 8080 on host port 7070
   config.vm.network "forwarded_port", guest: 8080, host: 7070
 
   config.vm.provider "virtualbox" do |vb|
@@ -25,7 +25,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Provision the box using a shell script
   # This script is copied into the box and then run
   config.vm.provision :shell, :privileged => true, :path => "provision.sh"
-
-
 
 end

@@ -102,5 +102,28 @@ Once you push changes to your Bitbucket repository the Jenkins build will be tri
     * Add `Read` and `Write` permissions to `Repositories`
     * Click `Save` button and a `Key` and `Secret` will be automatically generated
 ![bb OAuth](https://cloud.githubusercontent.com/assets/9073171/23789481/a8c3bb3e-0583-11e7-809f-776156954fd9.png)
-#### Add OAuth Credentials to jenkins
 
+#### Add OAuth Credentials to jenkins
+  * Ensure Jenkins URL is set
+    *  Go to the main Jenkins page
+    *  Press `Manage Jenkins` on the left panel
+    *  Choose `Configure System`
+    *  Go to section `Jenkins Location`
+    *  Set the ngrok URL in the `Jenkins URL` field
+    *  `Save`
+  * Navigate to the 'Bitbucket job'
+  * Click `Configure`
+  * Navigate to Post-build Actions
+  * Select `Bitbucket notify build status`
+  * Select all check boxes
+  * Press `Advanced` and add OAuth credentials
+    *  Select Username with password
+    *  Set the the OAuth consumer `key` in `Username`
+    *  Set the the OAuth consumer `secret` in `Password`
+    *  `Add`
+![Add oauth credentials](https://cloud.githubusercontent.com/assets/9073171/23789923/a47f6ada-0585-11e7-9751-89c98d86a321.png)
+  * Select newly created credentials: 
+![OAuth](https://cloud.githubusercontent.com/assets/9073171/23789958/c816364a-0585-11e7-8a22-a2d283988c61.png)
+  * `Save`
+Try to modify your project and push changes. You now should see the build status notification in the Bitbucket commits view:
+![build status](https://cloud.githubusercontent.com/assets/9073171/23790090/48ed08ac-0586-11e7-86c9-2eab8445ca09.png)
