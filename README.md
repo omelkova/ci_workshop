@@ -71,3 +71,16 @@ In the 'Build' section select 'Use Gradle Wrapper' radio button. Also tick "Make
 Press "Save".
 Got to "Bitbucket job" project and click "Build now". See the console output by selecting "Console Output" in the build view.
 ### Setup webhooks and status notifier
+To be able to run build on every 'git push' we need to get a Jenkins bitbucket-webhook address. To make Bitbucket to see our Jenkins server we need to make it available in the Internet. For that we will use ngrok utility (https://ngrok.com/)
+#### Setup ngrok
+  * Go to [ngrok](https://ngrok.com/) web page
+  * Download ngrok for your OS
+  * unzip to some location
+  * open the Terminal in this location and run:
+    ```sh
+    ./ngrok http 7070
+    ```
+Copy the forwarding URL and !!<span style="color:blue">do not close the console</span>!!:
+![ngrok](https://cloud.githubusercontent.com/assets/9073171/23788279/7c726c9c-057e-11e7-958e-484ee17fb3fb.png)
+After your Jenkins server become available in the Internet go to your Bitbucket project settings, Webhooks section in the left menu, press "Add webhook". Give any name to your new webhook, paste ngrok forwarding URl+/bitbucket-hook/, press "Save":
+![bb webhook settings](https://cloud.githubusercontent.com/assets/9073171/23788606/ec7e2e58-057f-11e7-96b1-8be7376e1b70.png)
