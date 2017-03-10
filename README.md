@@ -66,3 +66,8 @@ In the "Source Code Management" section select "Git", enter the URL of your fork
 ![BB credentials](https://cloud.githubusercontent.com/assets/9073171/23786978/792eadb2-0578-11e7-93f7-b32223747824.png)
 Add created credentials:
 ![Add credentials](https://cloud.githubusercontent.com/assets/9073171/23787027/b3a85826-0578-11e7-9538-17f586c44604.png)
+In the 'Build' section select 'Use Gradle Wrapper' radio button. Also tick "Make gradlew executable". Also setup a `test` gradle task:
+![gradle conf](https://cloud.githubusercontent.com/assets/9073171/23787239/c71c7936-0579-11e7-820d-9b128670931c.png)
+Press "Save".
+Got to "Bitbucket job" project and click "Build now". See the console output by selecting "Console Output" in the build view.
+### Setup webhooks and status notifier
