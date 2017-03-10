@@ -61,3 +61,8 @@ After cloning the project to the local machine, cd to the project directory and 
 ```
 If you fork workshop project - one test should fail.
 ### Creating a job for Bitbucket project
+Create a new job as before.
+In the "Source Code Management" section select "Git", enter the URL of your forked project. In the Credentials section click 'Add', add your Bitbucket username and password, click "Add":
+![BB credentials](https://cloud.githubusercontent.com/assets/9073171/23786978/792eadb2-0578-11e7-93f7-b32223747824.png)
+Add created credentials:
+![Add credentials](https://cloud.githubusercontent.com/assets/9073171/23787027/b3a85826-0578-11e7-9538-17f586c44604.png)
