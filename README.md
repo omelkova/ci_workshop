@@ -32,3 +32,7 @@ press "Install"
 ![install plugin](https://cloud.githubusercontent.com/assets/9073171/23782479/6f1cd0b2-055d-11e7-921e-f02c9d8326d0.png)
 Toggle "Restart Jenkins when installation is complete and no jobs are running"
 ## Create new job
+From the main page press `create new jobs` button. Enter the job's name and select 'Freestyle project'. Press 'OK'
+![create new job](https://cloud.githubusercontent.com/assets/9073171/23782650/a20fe1fc-055e-11e7-9ba2-f2042db959af.png)
+Scroll down to the 'Build' section, select 'Execute shell' from dropdown menu. Type in the simple shell command `echo Hello world`. Press 'Save':
+![setup first build](https://cloud.githubusercontent.com/assets/9073171/23782785/a85e725c-055f-11e7-85e5-9ff433d5e7c8.png)
