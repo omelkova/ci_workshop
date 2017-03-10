@@ -19,7 +19,7 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 Copy-paste the password
 
 - Customize Jenkins: select "Select plugins to install". Make sure to select following plugins:
--- Gradle Plugin
--- JUnit Plugin
--- Bitbucket plugin
--- Bitbucket Build Status Notifier Plugin
+  * Gradle Plugin
+  * JUnit Plugin
+  * Bitbucket plugin
+  * Bitbucket Build Status Notifier Plugin
