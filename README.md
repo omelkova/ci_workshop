@@ -22,4 +22,8 @@ Copy-paste the password
   * Gradle Plugin
   * JUnit Plugin
   * Bitbucket plugin
-  * Bitbucket Build Status Notifier Plugin
+  * Bitbucket Build Status Notifier Plugin (this plugin can not be presented in the list of plugins for initial setup, can be installed later)
+press "Install"
+![Plugin installation](https://cloud.githubusercontent.com/assets/9073171/23782332/2c4d145a-055c-11e7-8578-9659d90f6a26.png)
+- Create admin user as prompted:
+![Create user](https://cloud.githubusercontent.com/assets/9073171/23782364/7c6a250e-055c-11e7-9a04-94b961fc8c10.png)
