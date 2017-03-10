@@ -36,3 +36,10 @@ From the main page press `create new jobs` button. Enter the job's name and sele
 ![create new job](https://cloud.githubusercontent.com/assets/9073171/23782650/a20fe1fc-055e-11e7-9ba2-f2042db959af.png)
 Scroll down to the 'Build' section, select 'Execute shell' from dropdown menu. Type in the simple shell command `echo Hello world`. Press 'Save':
 ![setup first build](https://cloud.githubusercontent.com/assets/9073171/23782785/a85e725c-055f-11e7-85e5-9ff433d5e7c8.png)
+On the main page of our project press 'Build now' button from the left menu:
+![Build now](https://cloud.githubusercontent.com/assets/9073171/23782922/7b3eccd0-0560-11e7-8bc1-29259b4d9388.png)
+The build will be scheduled and executed. To see the build result navigate to the 'Build History' on the left menu and click on the blue ball. You will see the console output of the first successful build. 
+![console output](https://cloud.githubusercontent.com/assets/9073171/23783004/f4c60d52-0560-11e7-8cd7-e16035e62bd2.png)
+Now lets fail our first job. For that go to the main page for the 'first job' project and press 'Configure'. Scroll down to the 'Build' section and change script to the command which does not exist, for example `ech Hello world`, press "Apply". 
+Run build again by pressing "Build Now" in the "first job" view. The build will fail:
+![build failed](https://cloud.githubusercontent.com/assets/9073171/23785487/8ea50ec8-0570-11e7-9552-3f8bc7857b7d.png)
