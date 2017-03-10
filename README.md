@@ -43,3 +43,13 @@ The build will be scheduled and executed. To see the build result navigate to th
 Now lets fail our first job. For that go to the main page for the 'first job' project and press 'Configure'. Scroll down to the 'Build' section and change script to the command which does not exist, for example `ech Hello world`, press "Apply". 
 Run build again by pressing "Build Now" in the "first job" view. The build will fail:
 ![build failed](https://cloud.githubusercontent.com/assets/9073171/23785487/8ea50ec8-0570-11e7-9552-3f8bc7857b7d.png)
+
+## Create a real job
+### Preparation
+To setup build for the Point of sail(POS) app, first, we need to recall how to use `gradle`. Clone your project to the local machine.
+  * If you have any problems with accessing your code or do not have this project for some reason, you can first `fork` and then `clone` this Bitbucket repository `https://bitbucket.org/omelkova/ci-workshop-pos`:
+    * Create a bitbucket account if you don't have one yet and log in.
+    * Go to the [Project](https://bitbucket.org/omelkova/ci-workshop-pos)
+    * Click "Fork"
+    * Choose any name
+    * Click "Fork repository"
