@@ -88,3 +88,19 @@ After your Jenkins server become available in the Internet go to your Bitbucket 
 ![bb webhook settings](https://cloud.githubusercontent.com/assets/9073171/23788606/ec7e2e58-057f-11e7-96b1-8be7376e1b70.png)
 Note that this webhook become invalid once you will close your terminal with ngrok running.
 Once you push changes to your Bitbucket repository the Jenkins build will be triggered automatically.
+
+#### Setup build status notifier
+##### Create OAuth consumer
+  * Go to your Bitbucket account
+  * Click to your account avatar on the top-right corner
+  * Select `Bibucket settings`
+  * Click `OAuth` from the menu bar 
+  * Press `Add consumer` button
+    * Give any name 
+    * Paste ngrok url to the `Callback URL` field
+    * Leave blank the `URL` field
+    * Add `Read` and `Write` permissions to `Repositories`
+    * Click `Save` button and a `Key` and `Secret` will be automatically generated
+![bb OAuth](https://cloud.githubusercontent.com/assets/9073171/23789481/a8c3bb3e-0583-11e7-809f-776156954fd9.png)
+#### Add OAuth Credentials to jenkins
+
