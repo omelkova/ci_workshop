@@ -53,3 +53,11 @@ To setup build for the Point of sail(POS) app, first, we need to recall how to u
     * Click "Fork"
     * Choose any name
     * Click "Fork repository"
+
+After cloning the project to the local machine, cd to the project directory and run following gradle commands:
+```sh
+./gradlew build
+./gradlew test
+```
+If you fork workshop project - one test should fail.
+### Creating a job for Bitbucket project
