@@ -105,7 +105,7 @@ Once you push changes to your Bitbucket repository the Jenkins build will be tri
     * In the project configurations go to the `Post-build Actions` and add `Slack Notifications`, choose events you'd like to be notified about.
 ![conf Slack](https://cloud.githubusercontent.com/assets/9073171/23963417/e51f581a-09b9-11e7-8feb-d0b38a601eb3.png)
 
-press `Save`
+press `Save`. Now you will receive notifications to the selected slack channel during each build.
 ## Shippable
 ### Installation
 * Sign in to Shippable (http://www.shippable.com/) with your Bitbucket credentials
