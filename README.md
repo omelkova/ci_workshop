@@ -76,7 +76,7 @@ In the 'Build' section select 'Use Gradle Wrapper' radio button. Also tick "Make
 ![gradle conf](https://cloud.githubusercontent.com/assets/9073171/23787239/c71c7936-0579-11e7-820d-9b128670931c.png)
 Press "Save".
 Go to "Bitbucket job" project and click "Build now". See the console output by selecting "Console Output" in the build view.
-### Setup webhooks and status notifier
+### Setup webhooks
 To be able to run build on every 'git push' we need to get a Jenkins bitbucket-webhook address. To allow Bitbucket to see our Jenkins server we need to make it available in the Internet. For that we will use ngrok utility (https://ngrok.com/)
 #### Setup ngrok
   * Go to [ngrok](https://ngrok.com/) web page
@@ -92,48 +92,20 @@ After your Jenkins server become available in the Internet go to your Bitbucket 
 ![bb webhook settings](https://cloud.githubusercontent.com/assets/9073171/23788606/ec7e2e58-057f-11e7-96b1-8be7376e1b70.png)
 Note that this webhook become invalid once you will close your terminal with ngrok running.
 Once you push changes to your Bitbucket repository the Jenkins build will be triggered automatically.
+### Setup Slack status notifier 
+  * Login to your Slack account(https://slack.com/)
+  * Configure the Jenkins integration: https://my.slack.com/services/new/jenkins-ci
+  * To install this plugin on your Jenkins server
+    * Go to the main Jenkins page
+    * Press `Manage Jenkins` on the left panel
+    * Click on `Manage Plugins` and search for Slack in the `Available` tab. Click the checkbox and install the plugin.
+![install Slack Notifier](https://cloud.githubusercontent.com/assets/9073171/23962920/4e2da584-09b8-11e7-86e6-f3fafb9e9a7c.png)
+    * After it's installed, click on `Manage Jenkins` again in the left navigation, and then go to `Configure System`. Find the Global Slack Notifier Settings section and add the provided values:	
+![configure Slack](https://cloud.githubusercontent.com/assets/9073171/23963259/56e0e1a4-09b9-11e7-9175-ea3ca6e8fe29.png)
+    * In the project configurations go to the `Post-build Actions` and add `Slack Notifications`, choose events you'd like to be notified about.
+![conf Slack](https://cloud.githubusercontent.com/assets/9073171/23963417/e51f581a-09b9-11e7-8feb-d0b38a601eb3.png)
 
-#### Setup build status notifier
-##### Create OAuth consumer
-  * Go to Bitbucket
-  * Click to your account avatar on the top-right corner
-  * Select `Bibucket settings`
-  * Click `OAuth` from the menu bar 
-  * Press `Add consumer` button
-    * Give any name 
-    * Paste ngrok url to the `Callback URL` field
-    * Leave blank the `URL` field
-    * Add `Read` and `Write` permissions to `Repositories`
-    * Click `Save` button and a `Key` and `Secret` will be automatically generated
-![bb OAuth](https://cloud.githubusercontent.com/assets/9073171/23789481/a8c3bb3e-0583-11e7-809f-776156954fd9.png)
-
-#### Add OAuth Credentials to jenkins
-  * Ensure Jenkins URL is set
-    *  Go to the main Jenkins page
-    *  Press `Manage Jenkins` on the left panel
-    *  Choose `Configure System`
-    *  Go to section `Jenkins Location`
-    *  Set the ngrok URL in the `Jenkins URL` field
-    *  `Save`
-  * Navigate to the 'Bitbucket job'
-  * Click `Configure`
-  * Navigate to Post-build Actions
-  * Select `Bitbucket notify build status`
-  * Select all check boxes
-  * Press `Advanced` and add OAuth credentials
-    *  Select Username with password
-    *  Set the the OAuth consumer `key` in `Username`
-    *  Set the the OAuth consumer `secret` in `Password`
-    *  `Add`
-![Add oauth credentials](https://cloud.githubusercontent.com/assets/9073171/23789923/a47f6ada-0585-11e7-9751-89c98d86a321.png)
-  * Select newly created credentials: 
-![OAuth](https://cloud.githubusercontent.com/assets/9073171/23789958/c816364a-0585-11e7-8a22-a2d283988c61.png)
-  * `Save`
-
-Try to modify your project and push changes. You now should see the build status notification in the Bitbucket commits view:
-
-![build status](https://cloud.githubusercontent.com/assets/9073171/23790090/48ed08ac-0586-11e7-86c9-2eab8445ca09.png)
-
+press `Save`
 ## Shippable
 ### Installation
 * Sign in to Shippable (http://www.shippable.com/) with your Bitbucket credentials
