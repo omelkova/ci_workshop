@@ -3,6 +3,10 @@
 ## Installation
 - Install VirtualBox: https://www.virtualbox.org/wiki/Downloads
 - Install Vagrant: https://www.vagrantup.com/downloads.html
+- For Windows machines only - run in the terminal:
+	```
+	vagrant plugin install vagrant-vbguest
+	```
 - Clone or download tutorial git repository https://github.com/omelkova/ci_workshop.git
 - Open Terminal and change directory to `box` folder and run Vagrant box:
 ```sh

@@ -9,7 +9,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Every Vagrant virtual environment requires a box to build off of.
   # Named boxes, like this one, don't need a URL, since the are looked up
   # in the "vagrant cloud" (https://atlas.hashicorp.com/boxes/search)
-  config.vm.box = "boxcutter/debian8" #"puphpet/debian75-x64"
+  config.vm.box = "boxcutter/debian8"
 
   # Publish guest port 8080 on host port 7070
   config.vm.network "forwarded_port", guest: 8080, host: 7070
