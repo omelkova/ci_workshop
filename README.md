@@ -26,16 +26,12 @@ Copy-paste the password
   * Gradle Plugin
   * JUnit Plugin
   * Bitbucket plugin
-  * Bitbucket Build Status Notifier Plugin (this plugin can not be presented in the list of plugins for initial setup, can be installed later)
+
 press "Install"
 ![Plugin installation](https://cloud.githubusercontent.com/assets/9073171/23782332/2c4d145a-055c-11e7-8578-9659d90f6a26.png)
 - Create admin user as prompted:
 ![Create user](https://cloud.githubusercontent.com/assets/9073171/23782364/7c6a250e-055c-11e7-9a04-94b961fc8c10.png)
 - Start using Jenkins! Setup is finished!
-
-** To install missing plugin select " Manage Jenkins" from the left menu, then "Manage Plugins", select "Available" tab, search for `Bitbucket Build Status Notifier Plugin`, select it for installation and press "Download now and install after restart". 
-![install plugin](https://cloud.githubusercontent.com/assets/9073171/23782479/6f1cd0b2-055d-11e7-921e-f02c9d8326d0.png)
-Toggle "Restart Jenkins when installation is complete and no jobs are running"
 
 ## Create new job
 From the main page press `create new jobs` button. Enter the job's name and select 'Freestyle project'. Press 'OK'
@@ -64,7 +60,7 @@ To setup build for the Point of sail(POS) app, first, we need to recall how to u
 
 After cloning the project to the local machine, cd to the project directory and run following gradle commands:
 ```sh
-./gradlew build
+./gradlew assemble
 ./gradlew test
 ```
 If you have forked the workshop project - one test should fail.
